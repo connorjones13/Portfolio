@@ -1,0 +1,18 @@
+{
+  "jobs" : [
+    {
+      "title" : "Account Manager",
+      "employer" : "EY Studios",
+      "dates" : "Feb 2014 - Dec 2014",
+      "location" : "Kennesaw, GA",
+      "description" : "I did things"
+    },
+    {
+      "title" : "SEO Consultant",
+      "employer" : "JI Group",
+      "dates" : "2011-present",
+      "location" : "Auburn, AL",
+      "description" : "I did stuff"
+    }
+  ]
+}
