@@ -1,3 +1,4 @@
+
 $.getJSON('assets/work.json', function displayWork(work) {
     for(var job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
@@ -16,6 +17,19 @@ $.getJSON('assets/work.json', function displayWork(work) {
         var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         $(".work-entry:last").append(formattedDescription);
     }
+
+    work.languages.sort(function (a, b) {
+        return b.rank - a.rank;
+    });
+
+    for(var language in work.languages) {
+        $("#skills2").append(HTMLlanguageStart);
+//todo: write regEx for replaceAll()
+        var formattedSkill = HTMLlanguageSpecs.replace("%data%", work.languages[language].rank);
+        formattedSkill = formattedSkill.replace("%width%", work.languages[language].rank);
+        formattedSkill = formattedSkill.replace("%color%", work.languages[language].color);
+        formattedSkill = formattedSkill.replace("%name%", work.languages[language].name);
+        $(".skill-entry:last").append(formattedSkill);
+    }
 });
 
-//displayWork();
