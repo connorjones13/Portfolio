@@ -7,6 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
 
+    <!-- todo: add Google Analytics -->
+
+    <!-- Stylesheets -->
+
+    <link rel="stylesheet" href="css/styles.css">
+
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -39,12 +45,12 @@
                 <li><a href="#projects">Projects</a></li>
                 <li class="active"><a href="#work-experience">Work Experience</a></li>
                 <!-- todo: javascript to show active section -->
-                <li><a href="#resume">Resume</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="https://github.com/connorjones13/" target="_blank">Github</a></li>
-                <li><a href="#" target="_blank">LinkedIn</a></li>
+                <li><a href="https://linkedin.com/in/connorjones13" target="_blank">LinkedIn</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -59,8 +65,14 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Projects</h3>
                     </div>
-                    <div class="panel-body">
-                        Panel content
+                    <div class="panel-body row">
+                        <!-- todo: 2 columns. Projects | recent github repos -->
+                        <div class="col-sm-6">
+                            Current Projects go here
+                        </div>
+                        <div class="col-sm-6">
+                            Github feed goes here
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,19 +82,21 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Work Experience</h3>
                     </div>
-                    <div class="panel-body">
-                        Panel content
+                    <div class="panel-body" id="workExperience">
+
                     </div>
                 </div>
             </div>
 
-            <div id="resume">
+            <div id="skills">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Resume</h3>
+                        <h3 class="panel-title">Skills</h3>
                     </div>
                     <div class="panel-body">
-                        Panel content
+                        <div id="skills2" class="col-sm-6">
+                            <h4>Language Proficiency</h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,26 +107,32 @@
                         <h3 class="panel-title">Contact</h3>
                     </div>
                     <div class="panel-body">
-                        <form class="form-horizontal">
-                            <div class="form-group">
-                                <label for="contact-email" class="col-sm-2 control-label">Email</label>
-                                <div class="col-sm-6">
-                                    <input type="email" class="form-control" id="contact-email" placeholder="Enter your email">
+                        <div class="col-sm-6" id="contactForm">
+                            <form class="form-horizontal" name="contact-form">
+                                <div class="form-group">
+                                    <label for="contact-email" class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="contact-email" placeholder="Enter your email">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email-subject" class="col-sm-2 control-label">Subject</label>
-                                <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="email-subject" placeholder="Why are you contacting me?">
+                                <div class="form-group">
+                                    <label for="email-subject" class="col-sm-2 control-label">Subject</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="email-subject" placeholder="Why are you contacting me?">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email-body" class="col-sm-2 control-label">Message</label>
-                                <div class="col-sm-6">
-                                    <textarea class="form-control" id="email-body" placeholder="What's on your mind?"></textarea>
+                                <div class="form-group">
+                                    <label for="email-body" class="col-sm-2 control-label">Message</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="email-body" placeholder="What's on your mind?"></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                                <div class="form-group" id="alertDiv"></div>
+                                <div class="form-group">
+                                    <input type="button" value="Submit" class="btn btn-primary pull-right" id="submitBtn" onclick="submitForm()">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -131,6 +151,11 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+
+<!-- my scripts -->
+<script src="js/contactForm.js"></script>
+<script src="js/resumeBuilder.js"></script>
+<script src="js/helper.js"></script>
 
 </body>
 </html>

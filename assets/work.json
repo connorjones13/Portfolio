@@ -1,0 +1,50 @@
+{
+  "jobs" : [
+    {
+      "title" : "Account Manager",
+      "employer" : "EY Studios",
+      "dates" : "Feb 2014 - Dec 2014",
+      "location" : "Kennesaw, GA",
+      "description" : "I did things"
+    },
+    {
+      "title" : "SEO Consultant",
+      "employer" : "JI Group",
+      "dates" : "2011-present",
+      "location" : "Auburn, AL",
+      "description" : "I did stuff"
+    }
+  ],
+  "languages" : [
+    {
+      "name": "Java",
+      "rank" : 70,
+      "color" : "#b07219"
+    },
+    {
+      "name": "C++",
+      "rank" : 70,
+      "color" : "#4886FC"
+    },
+    {
+      "name": "JavaScript",
+      "rank" : 25,
+      "color" : "#f1e05a"
+    },
+    {
+      "name": "HTML",
+      "rank" : 90,
+      "color" : "#e44b23"
+    },
+    {
+      "name": "CSS",
+      "rank" : 70,
+      "color" : "#563d7c"
+    },
+    {
+      "name" : "Ruby",
+      "rank" : "20",
+      "color" : "#701516"
+    }
+  ]
+}
