@@ -5,14 +5,14 @@
       "employer" : "EY Studios",
       "dates" : "Feb 2014 - Dec 2014",
       "location" : "Kennesaw, GA",
-      "description" : "I did things"
+      "description" : "Collaborated with clients and our team to set goals and expectations for projects. Led both client and internal team meetings. Developed long-term relationships with clients to encourage repeat business with the studio. Managed full website redesigns (including platform transitions), new website designs, and smaller maintenance projects. Worked closely with the rest of the Account Management team to help develop a plan for restructuring the Account Management department. Suggested and helped transition the team over to a new process for collaborating with clients to get feedback on design proofs."
     },
     {
       "title" : "SEO Consultant",
       "employer" : "JI Group",
       "dates" : "2011-present",
       "location" : "Auburn, AL",
-      "description" : "I did stuff"
+      "description" : "Add details"
     }
   ],
   "languages" : [
@@ -28,7 +28,7 @@
     },
     {
       "name": "JavaScript",
-      "rank" : 25,
+      "rank" : 30,
       "color" : "#f1e05a"
     },
     {
@@ -45,6 +45,43 @@
       "name" : "Ruby",
       "rank" : "20",
       "color" : "#701516"
+    },
+    {
+      "name" : "Liquid",
+      "rank" : "25",
+      "color" : "#ccc"
     }
-  ]
+  ],
+  "platforms" : [
+    {
+      "name" : "Magento",
+      "rank" : 60,
+      "color" : "#f05519"
+    },
+    {
+      "name" : "Shopify",
+      "rank" : 80,
+      "color" : "#96bf48"
+    },
+    {
+      "name" : "WordPress",
+      "rank" : 40,
+      "color" : "#21759b"
+    },
+    {
+      "name" : "Yahoo! Small Business",
+      "rank" : 60,
+      "color" : "#400191"
+    },
+    {
+      "name" : "Volusion",
+      "rank" : 30,
+      "color" : "#005683"
+    },
+    {
+      "name" : "Bigcommerce",
+      "rank" : 60,
+      "color" : "#66cbdd"
+    }
+    ]
 }
