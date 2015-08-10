@@ -14,7 +14,13 @@ $.getJSON('assets/work.json', function displayWork(work) {
         var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
         $(".work-entry:last").append(formattedLocation);
 
-        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        var descripArray = work.jobs[job].description.split('.');
+        var descripString = "";
+        for(var i = 0; i < descripArray.length - 1; i++) {
+            descripString += "<li>" + descripArray[i] + "</li>";
+        }
+
+        var formattedDescription = HTMLworkDescription.replace("%data%", descripString);
         $(".work-entry:last").append(formattedDescription);
     }
 
@@ -23,13 +29,26 @@ $.getJSON('assets/work.json', function displayWork(work) {
     });
 
     for(var language in work.languages) {
-        $("#skills2").append(HTMLlanguageStart);
+        $("#language-proficiency").append(HTMLlanguageStart);
 //todo: write regEx for replaceAll()
-        var formattedSkill = HTMLlanguageSpecs.replace("%data%", work.languages[language].rank);
-        formattedSkill = formattedSkill.replace("%width%", work.languages[language].rank);
-        formattedSkill = formattedSkill.replace("%color%", work.languages[language].color);
-        formattedSkill = formattedSkill.replace("%name%", work.languages[language].name);
-        $(".skill-entry:last").append(formattedSkill);
+        var formattedLanguage = HTMLprogressSpecs.replace("%data%", work.languages[language].rank);
+        formattedLanguage = formattedLanguage.replace("%width%", work.languages[language].rank);
+        formattedLanguage = formattedLanguage.replace("%color%", work.languages[language].color);
+        formattedLanguage = formattedLanguage.replace("%name%", work.languages[language].name);
+        $(".language-entry:last").append(formattedLanguage);
+    }
+
+    work.platforms.sort(function (a, b) {
+        return b.rank - a.rank;
+    });
+
+    for(var platform in work.platforms) {
+        $("#platform-proficiency").append(HTMLplatformStart);
+        var formattedPlatform = HTMLprogressSpecs.replace("%data%", work.platforms[platform].rank);
+        formattedPlatform = formattedPlatform.replace("%width%", work.platforms[platform].rank);
+        formattedPlatform = formattedPlatform.replace("%color%", work.platforms[platform].color);
+        formattedPlatform = formattedPlatform.replace("%name%", work.platforms[platform].name);
+        $(".platform-entry:last").append(formattedPlatform);
     }
 });
 
