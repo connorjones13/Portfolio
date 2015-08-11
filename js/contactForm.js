@@ -8,8 +8,10 @@ function submitForm() {
 
     var form = document.getElementsByName('contact-form')[0];
 
+    var atSymbLocation = email.indexOf('@');
+    var periodLocation = email.indexOf('.');
 
-    if(email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+    if(atSymbLocation === -1 || periodLocation === -1 || periodLocation < atSymbLocation) {
         $('#alertDiv').append('<div class="alert alert-danger" role="alert">' +
             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
             '<span aria-hidden="true">&times;</span></button>Please enter a valid email address.</div>');
